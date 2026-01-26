@@ -1,5 +1,4 @@
 /* See LICENSE file for copyright and license details. */
-
 /* Default settings; can be overriden by command line. */
 
 /* appearance */
@@ -37,6 +36,10 @@ static const char *prompt = NULL;
 
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines = 0;
+
+/* -h option; minimum height of a menu line */
+static unsigned int lineheight = 0;
+static unsigned int min_lineheight = 8;
 
 /*
  * Characters not considered part of a word while deleting words
