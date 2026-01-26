@@ -1,21 +1,12 @@
 /* See LICENSE file for copyright and license details. */
 /* Default settings; can be overriden by command line. */
 
-/* appearance */
-#define CLR_NORFG    "#BBBBBB"
-#define CLR_NORBG    "#222222"
-#define CLR_SELFG    "#EEEEEE"
-#define CLR_SELBG    "#005577"
-#define CLR_OUTFG    "#000000"
-#define CLR_OUTBG    "#00FFFF"
-#define FNT_SANS     "sans:size=10"
-
 /* -b  option; if 0, dmenu appears at bottom */
 static int topbar = 1;
 
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	FNT_SANS
+	"sans:size=10"
 };
 
 /*
@@ -25,10 +16,10 @@ static const char *fonts[] = {
  * -sb option; selected background color
  */
 static const char *colors[SchemeLast][2] = {
-	/*               foreground  background */
-	[SchemeNorm] = { CLR_NORFG,  CLR_NORBG },
-	[SchemeSel]  = { CLR_SELFG,  CLR_SELBG },
-	[SchemeOut]  = { CLR_OUTFG,  CLR_OUTBG },
+	/*               fg         bg */
+	[SchemeNorm] = { "#BBBBBB", "#222222" },
+	[SchemeSel]  = { "#EEEEEE", "#005577" },
+	[SchemeOut]  = { "#000000", "#00FFFF" },
 };
 
 /* -p  option; prompt to the left of input field */
